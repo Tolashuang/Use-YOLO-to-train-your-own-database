@@ -7,11 +7,11 @@ The step of use YOLO to train your own database
 
 2.应用脚本文件对xml或json文件进行处理，提取出：
 
-  类别索引object box中心坐标x/整个图片的w box中心坐标y/整个图片的h box的w/整个图片的w box的h/整个图片的h，
+	类别索引object box中心坐标x/整个图片的w box中心坐标y/整个图片的h box的w/整个图片的w box的h/整个图片的h，
   
-  并且，生成txt的形式要和训练图片的格式(文件夹存储结构)、名称完全一致
+ 	并且，生成txt的形式要和训练图片的格式(文件夹存储结构)、名称完全一致
   
-  eg.
+	eg.
   
     1 0.716797 0.395833 0.216406 0.147222
     
@@ -20,9 +20,9 @@ The step of use YOLO to train your own database
     1 0.420312 0.395833 0.140625 0.166667
 
 3.生成train图片的路径：
-    ①直接用训练图片生成：
-    find /home/chensc/JPEGImage/...(绝对路径，图片根文件夹)/ | grep(查找的意思) jpg（要查找的包含关键字） > train.txt 
-    然后将生成的train.txt放到XXX-project中
+	①直接用训练图片生成：
+	find /home/chensc/JPEGImage/...(绝对路径，图片根文件夹)/ | grep(查找的意思) jpg（要查找的包含关键字） > train.txt 
+	然后将生成的train.txt放到XXX-project中
 
 ②用json转的labels中txt文件转换(因为这些labels中txt文件和图片名称对应)：
     (1)find /home/chensc/labels/...(绝对路径，特征labels的根文件夹)/ | grep(查找的意思) txt（要查找的包含关键字） > train.txt 
